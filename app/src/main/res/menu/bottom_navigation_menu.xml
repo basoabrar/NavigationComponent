@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/halamanKategori"
+        android:enabled="true"
+        android:icon="@drawable/ic_launcher_background"
+        android:title="cucu"/>
+    <item
+        android:id="@+id/halamanProfil"
+        android:enabled="true"
+        android:icon="@drawable/ic_launcher_background"
+        android:title="Music"/>
+    <item
+        android:id="@+id/fragmentKetiga"
+        android:enabled="true"
+        android:icon="@drawable/ic_launcher_background"
+        android:title="sample"/>
+
+</menu>

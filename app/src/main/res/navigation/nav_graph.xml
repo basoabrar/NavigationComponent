@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/halamanKategori">
+
+    <fragment
+        android:id="@+id/halamanKategori"
+        android:name="com.example.fragment.HalamanKategori"
+        android:label="Halaman kategori"
+        tools:layout="@layout/fragment_halaman_kategori">
+        <action
+            android:id="@+id/action_halamanKategori_to_halamanProfil"
+            app:destination="@id/halamanProfil" />
+    </fragment>
+    <fragment
+        android:id="@+id/halamanProfil"
+        android:name="com.example.fragment.HalamanProfil"
+        android:label="Halaman Profil"
+        tools:layout="@layout/fragment_halaman_profil">
+        <action
+            android:id="@+id/action_halamanProfil_to_fragmentKetiga"
+            app:destination="@id/fragmentKetiga"
+            app:popUpTo="@id/halamanKategori" />
+        <argument
+            android:name="nama_depan"
+            app:argType="string"
+            android:defaultValue="@null"
+            app:nullable="true" />
+        <argument
+            android:name="nama_belakang"
+            app:argType="string"
+            android:defaultValue="@null"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentKetiga"
+        android:name="com.example.fragment.FragmentKetiga"
+        android:label="Halaman Ketiga"
+        tools:layout="@layout/fragment_ketiga" />
+    <fragment
+        android:id="@+id/tentangFragment"
+        android:name="com.example.fragment.TentangFragment"
+        android:label="TentangFragment" />
+</navigation>
